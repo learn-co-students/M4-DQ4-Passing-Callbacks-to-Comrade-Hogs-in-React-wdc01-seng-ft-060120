@@ -22,10 +22,13 @@ export default class GalaxySNote7 extends React.Component {
   }
 
   relax = () => {
+    this.setState({panicked: false})
   }
 
   exclaim = () => {
     if (this.state.panicked) return
+    this.setState({panicked: true})
+    setTimeout(this.relax, 2000)
     this.exclaimAudio.play()
     this.squeelAudio.play()
   }
