@@ -22,6 +22,7 @@ export default class GalaxySNote7 extends React.Component {
   }
 
   relax = () => {
+    return !this.state.panicked
   }
 
   exclaim = () => {
